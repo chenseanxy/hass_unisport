@@ -1,4 +1,4 @@
-"""Sensor platform for integration_blueprint."""
+"""Sensor platform for unisport."""
 
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ async def async_setup_entry(
 
 
 class UnisportVisitorsSensor(UnisportEntity, SensorEntity):
-    """integration_blueprint Sensor class."""
+    """Unisport num of location validations Sensor class."""
 
     def __init__(
         self,
@@ -68,7 +68,7 @@ class UnisportVisitorsSensor(UnisportEntity, SensorEntity):
 
 
 class UnisportCapacitySensor(UnisportEntity, SensorEntity):
-    """integration_blueprint Sensor class."""
+    """Unisport location capacity Sensor class."""
 
     def __init__(
         self,
@@ -105,7 +105,7 @@ class UnisportTodayOpenSensor(UnisportEntity, SensorEntity):
         self.entity_description = SensorEntityDescription(
             key=f"unisport-today-open-{location.location_id}",
             name=f"Unisport {location.name} Opening Time Today",
-            icon="mdi:clock",
+            icon="mdi:clock-plus",
             device_class=SensorDeviceClass.TIMESTAMP,
             entity_registry_enabled_default=False,
         )
@@ -135,7 +135,7 @@ class UnisportTodayCloseSensor(UnisportEntity, SensorEntity):
         self.entity_description = SensorEntityDescription(
             key=f"unisport-today-close-{location.location_id}",
             name=f"Unisport {location.name} Closing Time Today",
-            icon="mdi:clock",
+            icon="mdi:clock-minus",
             device_class=SensorDeviceClass.TIMESTAMP,
             entity_registry_enabled_default=False,
         )

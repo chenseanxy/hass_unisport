@@ -52,9 +52,12 @@ This custom component is based on [integration_blueprint template](https://githu
 
 It comes with development environment in a container, easy to launch
 if you use Visual Studio Code. With this container you will have a stand alone
-Home Assistant instance running and already configured with the included
+Home Assistant instance already configured with the included
 [`configuration.yaml`](./config/configuration.yaml)
 file.
+Run and test the HA instance using `scripts/develop`.
+
+A lovelace dashboard is provided at `config/dashboard.yaml`, but you'll need to add it manually.
 
 ## License
 

@@ -1,0 +1,214 @@
+# Not loaded automatically, need to manually paste to frontend
+views:
+  - title: Home
+    sections:
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Kumpula
+            heading_style: title
+            badges:
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: binary_sensor.unisport_kumpula_status
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.kumpula_visitors
+                tap_action:
+                  action: more-info
+                state_content:
+                  - state
+                  - last_updated
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_kumpula_opening_time_today
+                tap_action:
+                  action: more-info
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_kumpula_closing_time_today
+                tap_action:
+                  action: more-info
+          - chart_type: line
+            period: 5minute
+            type: statistics-graph
+            entities:
+              - sensor.kumpula_visitors
+            stat_types:
+              - mean
+            hide_legend: true
+            grid_options:
+              columns: full
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Keskusta, Kluuvi
+            heading_style: title
+            badges:
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: binary_sensor.unisport_keskusta_kluuvi_status
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.keskusta_kluuvi_visitors
+                tap_action:
+                  action: more-info
+                state_content:
+                  - state
+                  - last_updated
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_keskusta_kluuvi_opening_time_today
+                tap_action:
+                  action: more-info
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_keskusta_kluuvi_closing_time_today
+                tap_action:
+                  action: more-info
+          - chart_type: line
+            period: 5minute
+            type: statistics-graph
+            entities:
+              - sensor.keskusta_kluuvi_visitors
+            stat_types:
+              - mean
+            hide_legend: true
+            grid_options:
+              columns: full
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Meilahti
+            heading_style: title
+            badges:
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: binary_sensor.unisport_meilahti_status
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.meilahti_visitors
+                tap_action:
+                  action: more-info
+                state_content:
+                  - state
+                  - last_updated
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_meilahti_opening_time_today
+                tap_action:
+                  action: more-info
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_meilahti_closing_time_today
+                tap_action:
+                  action: more-info
+          - chart_type: line
+            period: 5minute
+            type: statistics-graph
+            entities:
+              - sensor.meilahti_visitors
+            stat_types:
+              - mean
+            hide_legend: true
+            grid_options:
+              columns: full
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Otaniemi
+            heading_style: title
+            badges:
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: binary_sensor.unisport_otaniemi_status
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.otaniemi_visitors
+                tap_action:
+                  action: more-info
+                state_content:
+                  - state
+                  - last_updated
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_otaniemi_opening_time_today
+                tap_action:
+                  action: more-info
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_otaniemi_closing_time_today
+                tap_action:
+                  action: more-info
+          - chart_type: line
+            period: 5minute
+            type: statistics-graph
+            entities:
+              - sensor.otaniemi_visitors
+            stat_types:
+              - mean
+            hide_legend: true
+            grid_options:
+              columns: full
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Töölö
+            heading_style: title
+            badges:
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: binary_sensor.unisport_toolo_status
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.toolo_visitors
+                tap_action:
+                  action: more-info
+                state_content:
+                  - state
+                  - last_updated
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_toolo_opening_time_today
+                tap_action:
+                  action: more-info
+              - type: entity
+                show_state: true
+                show_icon: true
+                entity: sensor.unisport_toolo_closing_time_today
+                tap_action:
+                  action: more-info
+          - chart_type: line
+            period: 5minute
+            type: statistics-graph
+            entities:
+              - sensor.toolo_visitors
+            stat_types:
+              - mean
+            hide_legend: true
+            grid_options:
+              columns: full

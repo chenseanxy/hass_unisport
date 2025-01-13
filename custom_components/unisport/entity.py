@@ -1,4 +1,4 @@
-"""BlueprintEntity class."""
+"""UnisportEntity class."""
 
 from __future__ import annotations
 

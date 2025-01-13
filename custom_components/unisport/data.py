@@ -1,4 +1,4 @@
-"""Custom types for integration_blueprint."""
+"""Custom types for unisport."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ type UnisportConfigEntry = ConfigEntry[UnisportData]
 
 @dataclass
 class UnisportData:
-    """Data for the Blueprint integration."""
+    """Data for the unisport integration."""
 
     client: UnisportApiClient
     coordinator: UnisportDataUpdateCoordinator
