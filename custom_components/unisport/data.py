@@ -52,6 +52,7 @@ class UnisportLocation(BaseModel):
         today = datetime.datetime.now(tz=UNISPORT_TZ).today()
         # opening_hours has 1-based index
         opening_hour = self.opening_hours.get(today.weekday() + 1)
+
         if not opening_hour:
             LOGGER.debug(
                 "No opening hours for today: %s, weekday: %s, available: %s",
@@ -60,7 +61,8 @@ class UnisportLocation(BaseModel):
                 self.opening_hours,
             )
             return None
-        times = (
+
+        return (
             # Opening
             UNISPORT_TZ.localize(
                 datetime.datetime.combine(
@@ -74,18 +76,15 @@ class UnisportLocation(BaseModel):
                     today,
                     datetime.time.fromisoformat(opening_hour.time_end),
                 )
+                # 24:00:00 is not a valid time
+                # so we need to convert it to 00:00 the next day
                 if not opening_hour.time_end.startswith("24:")
-                # 24:00 is not a valid time, so we need to convert it to 00:00 the next day
                 else datetime.datetime.combine(
                     today + datetime.timedelta(days=1),
                     datetime.time(0, 0),
                 ),
             ),
         )
-        LOGGER.debug(
-            "Updating opening hour, original: %s -> parsed: %s", opening_hour, times
-        )
-        return times
 
     def is_open_now(self) -> bool | None:
         """Return if the location is open now."""

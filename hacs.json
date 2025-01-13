@@ -1,5 +1,8 @@
 {
     "name": "unisport",
-    "homeassistant": "2025.1.2",
-    "hacs": "2.0.1"
+    "homeassistant": "2024.11.0",
+    "hacs": "2.0.1",
+    "country": [
+        "FI"
+    ]
 }
