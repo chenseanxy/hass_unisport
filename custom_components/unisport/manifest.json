@@ -1,12 +1,12 @@
 {
-  "domain": "integration_blueprint",
-  "name": "Integration blueprint",
+  "domain": "unisport",
+  "name": "unisport",
   "codeowners": [
-    "@ludeeus"
+    "@chenseanxy"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/ludeeus/integration_blueprint",
+  "documentation": "https://github.com/chenseanxy/hass_unisport",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/ludeeus/integration_blueprint/issues",
+  "issue_tracker": "https://github.com/chenseanxy/hass_unisport/issues",
   "version": "0.1.0"
 }
