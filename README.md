@@ -20,11 +20,12 @@ There are no configurations required otherwise. You can enable / disable the dif
 
 ## Why?
 
-🤷
-
-## What?
+Fancy graphs go brrrrr
 
 ![Screenshot of four unisport gym status](docs/images/screenshot.png)
+
+
+## What?
 
 This intergration provides the following entities for each gym location:
 
