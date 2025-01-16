@@ -4,7 +4,7 @@ This intergration provides Unisport related states in Home Assistant, like the n
 
 ## How?
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=chenseanxy&repository=hass_unisport&category=Intergration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=chenseanxy&repository=hass_unisport&category=integration)
 
 Install via [HACS](https://www.hacs.xyz/docs/use/) by using the link above, or manually add this repo (`chenseanxy/hass_unisport`) as a [custom repository](https://www.hacs.xyz/docs/faq/custom_repositories/).
 
